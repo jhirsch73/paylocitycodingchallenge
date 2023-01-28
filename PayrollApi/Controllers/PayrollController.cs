@@ -64,7 +64,7 @@ namespace Payroll.Services.Controllers
 
         // PUT: api/EmployeeItems/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+        [HttpPut("/employee/add/dependent/{id}")]
         public async Task<IActionResult> AddDependantItem(long id, DependentItem dependentItem)
         {
             var employeeItem = await _context.EmployeeItems.FindAsync(id);
