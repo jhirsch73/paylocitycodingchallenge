@@ -1,0 +1,12 @@
+/Users/jeff/dev/paylocity/PayrollCodingChallenge/PayrollService/bin/Debug/net7.0/PayrollService.deps.json
+/Users/jeff/dev/paylocity/PayrollCodingChallenge/PayrollService/bin/Debug/net7.0/PayrollService.dll
+/Users/jeff/dev/paylocity/PayrollCodingChallenge/PayrollService/bin/Debug/net7.0/PayrollService.pdb
+/Users/jeff/dev/paylocity/PayrollCodingChallenge/PayrollService/obj/Debug/net7.0/PayrollService.csproj.AssemblyReference.cache
+/Users/jeff/dev/paylocity/PayrollCodingChallenge/PayrollService/obj/Debug/net7.0/PayrollService.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jeff/dev/paylocity/PayrollCodingChallenge/PayrollService/obj/Debug/net7.0/PayrollService.AssemblyInfoInputs.cache
+/Users/jeff/dev/paylocity/PayrollCodingChallenge/PayrollService/obj/Debug/net7.0/PayrollService.AssemblyInfo.cs
+/Users/jeff/dev/paylocity/PayrollCodingChallenge/PayrollService/obj/Debug/net7.0/PayrollService.csproj.CoreCompileInputs.cache
+/Users/jeff/dev/paylocity/PayrollCodingChallenge/PayrollService/obj/Debug/net7.0/PayrollService.dll
+/Users/jeff/dev/paylocity/PayrollCodingChallenge/PayrollService/obj/Debug/net7.0/refint/PayrollService.dll
+/Users/jeff/dev/paylocity/PayrollCodingChallenge/PayrollService/obj/Debug/net7.0/PayrollService.pdb
+/Users/jeff/dev/paylocity/PayrollCodingChallenge/PayrollService/obj/Debug/net7.0/ref/PayrollService.dll
