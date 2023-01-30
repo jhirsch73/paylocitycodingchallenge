@@ -22,7 +22,7 @@ namespace Payroll.UnitTests.Services
             var payrollService = new PayrollService();
             
             var payrollDeduction = payrollService.GetCurrentPayrollDeduction(employee);
-            var payroll = await payrollService.GetCurrentPayroll(employee);
+            var payroll = await payrollService.GetCurrentPayroll(employee).ConfigureAwait(false);
             Assert.Equal(expectedDeduction.ToString("F"), payrollDeduction.ToString("F"));
             Assert.Equal(payroll.BiweeklyGross, 2000.00m.ToString("C"));
             Assert.Equal(payroll.BiWeeklyDeductions, payrollDeduction.ToString("C"));

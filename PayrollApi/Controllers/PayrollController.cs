@@ -33,7 +33,7 @@ namespace Payroll.Services.Controllers
           {
               return NotFound();
           }
-            return await _context.EmployeeItems.ToListAsync();
+            return await _context.EmployeeItems.ToListAsync().ConfigureAwait(false);
         }
 
         // Post: api/preview
@@ -41,7 +41,7 @@ namespace Payroll.Services.Controllers
         public async Task<ActionResult<PayrollItem>> GetDeductionsPreview(EmployeeItem employee)
         {
           var payrollService = new PayrollService();
-          return await payrollService.GetCurrentPayroll(employee);
+          return await payrollService.GetCurrentPayroll(employee).ConfigureAwait(false);
         }
 
         // GET: api/EmployeeItems/5
@@ -52,7 +52,7 @@ namespace Payroll.Services.Controllers
           {
               return NotFound();
           }
-            var employeeItem = await _context.EmployeeItems.FindAsync(id);
+            var employeeItem = await _context.EmployeeItems.FindAsync(id).ConfigureAwait(false);
 
             if (employeeItem == null)
             {
@@ -67,7 +67,7 @@ namespace Payroll.Services.Controllers
         [HttpPut("/employee/add/dependent/{id}")]
         public async Task<IActionResult> AddDependantItem(long id, DependentItem dependentItem)
         {
-            var employeeItem = await _context.EmployeeItems.FindAsync(id);
+            var employeeItem = await _context.EmployeeItems.FindAsync(id).ConfigureAwait(false);
             if (employeeItem == null)
             {
                 return NotFound();
@@ -78,7 +78,7 @@ namespace Payroll.Services.Controllers
 
             try
             {
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync().ConfigureAwait(false);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -118,7 +118,7 @@ namespace Payroll.Services.Controllers
             }
         
             _context.EmployeeItems.Add(employee);
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync().ConfigureAwait(false);
 
             // return CreatedAtAction("GetemployeeItem", new { id = employeeItem.Id }, employeeItem);
             return CreatedAtAction(nameof(GetEmployeeItem), new { id = employeeItem.Id }, employeeItem);
@@ -132,14 +132,14 @@ namespace Payroll.Services.Controllers
             {
                 return NotFound();
             }
-            var employeeItem = await _context.EmployeeItems.FindAsync(id);
+            var employeeItem = await _context.EmployeeItems.FindAsync(id).ConfigureAwait(false);
             if (employeeItem == null)
             {
                 return NotFound();
             }
 
             _context.EmployeeItems.Remove(employeeItem);
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync().ConfigureAwait(false);
 
             return NoContent();
         }
